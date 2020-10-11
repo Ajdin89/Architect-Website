@@ -1,3 +1,6 @@
-body {
-	background: blue;
-}
+@import 'base';
+@import 'config';
+@import 'components';
+
+// MEDIA QUERIES
+@import 'media';

@@ -1,0 +1,74 @@
+// SECTION NAVBAR
+.navbar {
+	@include flexLayout;
+	position: sticky;
+	height: 80px;
+	background: $dark;
+	font-size: 1.2rem;
+	top: 0;
+	z-index: 999;
+}
+
+.navbar_container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+#navbar_logo {
+	display: flex;
+	align-items: center;
+	background-color: #ff8177;
+	background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.navbar_menu {
+	display: flex;
+	align-items: center;
+}
+
+.navbar_item {
+	height: 80px;
+}
+
+.navbar_links {
+	@include flexLayout;
+	width: 125px;
+	height: 100%;
+	color: $light;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: $primary;
+		transition: all 0.3s ease;
+	}
+}
+
+.navbar_btn {
+	@include flexLayout;
+	padding: 0 1rem;
+	width: 100%;
+}
+
+.button {
+	@extend %btn;
+	color: $light;
+	background-color: $primary;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: darken($primary, 10%);
+	}
+}
