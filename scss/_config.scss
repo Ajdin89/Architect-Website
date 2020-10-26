@@ -14,13 +14,11 @@ $light: #fefefe;
 // SHARED BUTTON
 %btn {
 	display: inline-block;
-	padding: 10px 20px;
+	text-align: center;
 	border: none;
-	border-radius: 4px;
-
-	&:active {
-		transform: scale(0.98);
-	}
+	outline: none;
+	transition: 0.2s all ease;
+	cursor: pointer;
 }
 
 .btn-primary {
