@@ -4,13 +4,6 @@ $secondary: #f3f3f3;
 $dark: #333;
 $light: #fefefe;
 
-// MIXINS
-@mixin flexLayout($justify: center) {
-	display: flex;
-	justify-content: $justify;
-	align-items: center;
-}
-
 // SHARED BUTTON
 %btn {
 	display: inline-block;
@@ -19,14 +12,32 @@ $light: #fefefe;
 	outline: none;
 	transition: 0.2s all ease;
 	cursor: pointer;
+
+	&-primary {
+		@extend %btn;
+		background-color: lighten($primary, 10%);
+	}
+	
+	&-secondary {
+		@extend %btn;
+		background-color: lighten($dark, 15%);
+	}
 }
 
-.btn-primary {
-	@extend %btn;
-	background-color: lighten($primary, 10%);
+
+// MIXINS
+@mixin flexLayout($justify: center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: center;
 }
 
-.btn-secondary {
-	@extend %btn;
-	background-color: lighten($dark, 15%);
+// MEDIA QUERIES
+@mixin responsive($breakpoint) {
+	@if ($breakpoint == md) {
+		@media screen and (max-width: 960px) {
+			@content;
+		}
+	}
 }
+

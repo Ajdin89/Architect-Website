@@ -1,89 +1,80 @@
 // NAVBAR
 .navbar {
-	@include flexLayout;
+	@include flexLayout(space-between);
 	position: sticky;
 	height: 80px;
 	background: $dark;
 	font-size: 1.7rem;
 	top: 0;
-	z-index: 999;
-}
+	z-index: 99;
 
-.navbar_container {
-	display: flex;
-	justify-content: space-between;
-	height: 80px;
-	z-index: 1;
-	width: 100%;
-	max-width: 1300px;
-	margin: 0 auto;
-	padding: 0 50px;
-}
+	&_logo {
+		display: flex;
+		align-items: center;
+		background: #f2994a;
+		background-image: linear-gradient(to top, #f12711 0%, #f5af19 100%);
+		background-size: 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
+		font-size: 2.8rem;
+		font-family: 'Tenor Sans', sans-serif;
+		font-weight: 700;
+		margin-left: 3rem;
+		cursor: pointer;
+	}
 
-#navbar_logo {
-	display: flex;
-	align-items: center;
-	background: #f2994a;
-	background-image: linear-gradient(to top, #f12711 0%, #f5af19 100%);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color: transparent;
-	font-size: 2.8rem;
-	font-family: 'Tenor Sans', sans-serif;
-	font-weight: 700;
-	cursor: pointer;
-}
+	&_menu {
+		display: flex;
+		align-items: center;
+	}
 
-.navbar_menu {
-	display: flex;
-	align-items: center;
-}
+	&_item {
+		height: 80px;
+	}
 
-.navbar_item {
-	height: 80px;
-}
-
-.navbar_links {
-	@include flexLayout;
-	width: 125px;
-	height: 100%;
-	color: $light;
-	text-transform: uppercase;
-	transition: all 0.3s ease;
-
-	&:hover {
-		color: $primary;
+	&_links {
+		@include flexLayout;
+		width: 125px;
+		height: 100%;
+		color: $light;
+		text-transform: uppercase;
 		transition: all 0.3s ease;
-	}
-}
 
-.navbar_btn {
-	@include flexLayout;
-	padding: 0 1rem;
-	width: 100%;
-}
-
-.button {
-	@extend %btn;
-	color: $light;
-	background-color: $primary;
-	padding: 10px 20px;
-	border: 1px solid $dark;
-	border-radius: 24px;
-	background-image: linear-gradient(to right, transparent 50%, #ff4b4b 50%);
-	background-size: 200%;
-	background-position: 0%;
-	text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
-	transition: 0.4s all ease-in-out;
-
-	&:hover {
-		background-position: 100%;
+		&:hover {
+			color: $primary;
+			transition: all 0.3s ease;
+		}
 	}
 
-	&:active {
-		transform: scale(0.97);
+	&_btn {
+		@include flexLayout;
+		width: 100%;
+		padding: 0 1rem;
+		margin-right: 2rem;
+
+		.button {
+			@extend %btn;
+			color: $light;
+			background-color: $primary;
+			padding: 10px 20px;
+			border: 1px solid $dark;
+			border-radius: 24px;
+			background-image: linear-gradient(to right, transparent 50%, #ff4b4b 50%);
+			background-size: 200%;
+			background-position: 0%;
+			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+			transition: 0.4s all ease-in-out;
+
+			&:hover {
+				background-position: 100%;
+			}
+
+			&:active {
+				transform: scale(0.97);
+			}
+		}
 	}
 }
 
@@ -93,56 +84,133 @@
 	width: 100%;
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.8);
-}
 
-.wrapper {
-	background: url('/dist/img/bg.jpg') no-repeat center center/cover;
-	height: 100vh;
-	width: 100%;
-	opacity: 0.5;
-}
+	.wrapper {
+		background: url('/dist/img/bg.jpg') no-repeat center center/cover;
+		height: 100vh;
+		width: 100%;
+		opacity: 0.5;
+	}
 
-.banner {
-	position: absolute;
-	top: 30%;
-	left: 15%;
-	width: 60%;
-}
+	.banner {
+		position: absolute;
+		top: 30%;
+		left: 12%;
+		width: 60%;
 
-.banner h1 {
-	color: $light;
-	font-size: 6rem;
-	font-family: 'Baloo Da 2', sans-serif;
-	font-weight: 300;
-	width: 55%;
-	line-height: 6.5rem;
-	letter-spacing: 0.2rem;
-	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-}
+		h1 {
+			color: $light;
+			font-size: 6rem;
+			font-family: 'Baloo Da 2', sans-serif;
+			font-weight: 300;
+			width: 55%;
+			line-height: 6.5rem;
+			letter-spacing: 0.2rem;
+			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+		}
 
-.banner p {
-	font-family: 'Calibri', sans-serif;
-	font-size: 2rem;
-	color: $light;
-	letter-spacing: 0.1rem;
-	margin-bottom: 3rem;
-	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-}
+		p {
+			font-family: 'Calibri', sans-serif;
+			font-size: 2rem;
+			color: $light;
+			letter-spacing: 0.1rem;
+			margin-bottom: 3rem;
+			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+		}
 
-.btn-header {
-	@extend %btn;
-	padding: 2rem 6rem;
-	color: $light;
-	background-color: $primary;
-	text-transform: uppercase;
-	font-size: 1.7rem;
-	text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
-	box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-	outline: 2px solid $primary;
+		.btn-header {
+			@extend %btn;
+			padding: 2rem 6rem;
+			color: $light;
+			background-color: $primary;
+			text-transform: uppercase;
+			font-size: 1.7rem;
+			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+			box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+			outline: 2px solid $primary;
 
-	&:active {
-		background-color: darken($primary, 10%);
-		outline: 2px solid $primary;
-		outline-offset: 6px;
+			&:active {
+				background-color: darken($primary, 10%);
+				outline: 2px solid $primary;
+				outline-offset: 6px;
+			}
+		}
 	}
 }
+
+// ABOUT
+.about_us {
+	width: 100%;
+	background-color: $secondary;
+	padding-bottom: 8rem;
+}
+
+.section_header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 7rem 0 10rem 0;
+
+	.section_heading {
+		font-family: 'Varela', sans-serif;
+		font-size: 5rem;
+		font-weight: 500;
+		color: $dark;
+		margin-bottom: 4rem;
+	}
+
+	.underline {
+		width: 12rem;
+		height: 0.3rem;
+		background: $primary;
+	}
+}
+
+.services {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 4rem;
+
+	.about_img_wrapper img {
+		width: 75rem;
+		margin-left: 5rem;
+	}
+
+	.service {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+	
+		.box {
+			display: block;
+			margin-right: 2rem;
+	
+			.service_header {
+				display: flex;
+				margin-bottom: 1.5rem;
+			
+				i {
+					color: $primary;
+					font-size: 2.5rem;
+					margin-right: 1rem;
+				}
+				
+				h3 {
+					font-size: 2.5rem;
+					color: $dark;
+				}
+			}
+			
+			.service_text {
+				font-size: 1.2rem;
+				line-height: 1.5rem;
+				letter-spacing: 0.1rem;
+			}
+		}
+	}
+}
+
+
+
+
