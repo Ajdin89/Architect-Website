@@ -3,6 +3,10 @@ $primary: #f29d1f;
 $secondary: #f3f3f3;
 $dark: #333;
 $light: #fefefe;
+$dark-gray: #999;
+$danger: #f00530;
+$success: #2ecc71;
+$info: #0f3cff;
 
 // SHARED BUTTON
 %btn {
@@ -29,6 +33,13 @@ $light: #fefefe;
 	display: flex;
 	justify-content: $justify;
 	align-items: center;
+}
+
+
+@mixin typography($family: 'Baloo Da 2', $size: 2rem, $weight: 300) {
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
 }
 
 // MEDIA QUERIES

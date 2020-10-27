@@ -11,7 +11,7 @@
 html {
   font-size: 62.5%; }
 
-.navbar_btn .button, .header .banner .btn-header {
+.navbar_btn .button, .header .banner .btn-header, .section_content .content_right form .btn-submit {
   display: inline-block;
   text-align: center;
   border: none;
@@ -184,7 +184,7 @@ html {
       width: 100%;
       height: 100%;
       border-radius: 0.5rem;
-      background-color: #262626; }
+      background-color: #333; }
       .cards-wrapper .card .card-img img {
         width: 100%;
         height: 100%;
@@ -203,29 +203,129 @@ html {
     visibility: hidden;
     transition: all 0.4s ease-in-out; }
     .cards-wrapper .card-info h2 {
-      font-family: 'Baloo Da 2', sans-serif;
+      font-family: "Baloo Da 2";
       font-size: 3.5rem;
       font-weight: 300;
       line-height: 2.5rem;
-      color: #eee;
+      color: #fefefe;
       margin-bottom: 0.8rem; }
     .cards-wrapper .card-info h3 {
-      font-family: 'Julius Sans One', sans-serif;
-      font-weight: 600;
+      font-family: "Julius Sans One";
       font-size: 2rem;
+      font-weight: 600;
       color: #f29d1f;
       margin-bottom: 1rem; }
     .cards-wrapper .card-info p {
-      width: 90%;
-      font-family: 'Baloo Da 2', sans-serif;
+      font-family: "Baloo Da 2";
       font-size: 1.4rem;
       font-weight: 300;
       line-height: 1.6rem;
-      color: #eee; }
+      width: 90%;
+      color: #fefefe; }
   .cards-wrapper .card:hover .card-info {
     bottom: 2rem;
     opacity: 1;
     visibility: visible; }
+
+.contact {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 10rem; }
+
+.section_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74%;
+  height: 60rem;
+  background: #f3f3f3;
+  box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.5); }
+  .section_content .content_left img {
+    width: 50rem;
+    height: 60rem; }
+  .section_content .content_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50rem;
+    flex-direction: column;
+    margin-top: -2px; }
+    .section_content .content_right .contact_heading {
+      font-family: "Baloo Da 2";
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 2.4rem;
+      letter-spacing: 0.12rem;
+      padding: 0 4.5rem;
+      margin: 5.8rem 0 1rem 0;
+      text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2); }
+    .section_content .content_right form {
+      height: 100%;
+      width: 40rem;
+      font-family: 'Tenor', sans-serif;
+      padding: 0.5rem 2rem; }
+      .section_content .content_right form .input_group {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+        position: relative; }
+        .section_content .content_right form .input_group .field {
+          width: 100%;
+          height: 4rem;
+          font-size: 1.45rem;
+          padding-left: 0.7rem;
+          border: 0.19rem solid #999;
+          border-radius: 0.2rem;
+          box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2); }
+          .section_content .content_right form .input_group .field .field:focus {
+            color: #333;
+            font-style: inherit; }
+        .section_content .content_right form .input_group small {
+          font-size: 1.1rem;
+          letter-spacing: 0.5px;
+          margin-top: 0.4rem;
+          visibility: hidden; }
+        .section_content .content_right form .input_group .message {
+          color: #333;
+          padding: 0.5rem;
+          margin-bottom: 1.5rem;
+          font-family: 'Calibri', sans-serif;
+          border: 0.19rem solid #999;
+          border-radius: 0.2rem;
+          box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
+          .section_content .content_right form .input_group .message .message:focus {
+            background: #f1f1f1;
+            color: #212121; }
+      .section_content .content_right form .input_group.valid .field {
+        border-color: #2ecc71; }
+      .section_content .content_right form .input_group.error .field {
+        border-color: #f00530; }
+      .section_content .content_right form .input_group.error small {
+        visibility: visible;
+        color: #f00530; }
+      .section_content .content_right form .btn-submit {
+        width: 100%;
+        height: 5rem;
+        color: #fefefe;
+        background-color: #0f3cff;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+        outline: 2px solid #0f3cff;
+        transition: all 0.2s ease; }
+        .section_content .content_right form .btn-submit:active {
+          outline: 2px solid #fefefe;
+          outline-offset: -6px; }
 
 .section_header {
   display: flex;

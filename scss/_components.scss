@@ -212,7 +212,7 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 0.5rem;
-			background-color: #262626;
+			background-color: $dark;
 
 			img {
 				width: 100%;
@@ -239,29 +239,23 @@
 		transition: all 0.4s ease-in-out;
 
 		h2 {
-			font-family: 'Baloo Da 2', sans-serif;
-			font-size: 3.5rem;
-			font-weight: 300;
+			@include typography($size: 3.5rem);
 			line-height: 2.5rem;
-			color: #eee;
+			color: $light;
 			margin-bottom: 0.8rem;
 		}
 
 		h3 {
-			font-family: 'Julius Sans One', sans-serif;
-			font-weight: 600;
-			font-size: 2rem;
+			@include typography($family: 'Julius Sans One', $weight: 600);
 			color: $primary;
 			margin-bottom: 1rem;
 		}
 
 		p {
-			width: 90%;
-			font-family: 'Baloo Da 2', sans-serif;
-			font-size: 1.4rem;
-			font-weight: 300;
+			@include typography($size: 1.4rem);
 			line-height: 1.6rem;
-			color: #eee;
+			width: 90%;
+			color: $light;
 		}
 	}
 
@@ -269,5 +263,132 @@
 		bottom: 2rem;
 		opacity: 1;
 		visibility: visible;
+	}
+}
+
+// CONTACT
+.contact {
+	background: #ece9e6;
+	background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+	background: linear-gradient(to right, #ffffff, #ece9e6);
+
+	@include flexLayout;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding-bottom: 10rem;
+}
+
+.section_content {
+	@include flexLayout;
+	width: 74%;
+	height: 60rem;
+	background: $secondary;
+	box-shadow: 0 0.3rem 0.7rem rgba($color: #000000, $alpha: 0.5);
+
+	.content_left img {
+		width: 50rem;
+		height: 60rem;
+	}
+
+	.content_right {
+		@include flexLayout;
+		height: 100%;
+		width: 50rem;
+		flex-direction: column;
+		margin-top: -2px;
+
+		.contact_heading {
+			@include typography($weight: 600);
+			text-align: center;
+			line-height: 2.4rem;
+			letter-spacing: 0.12rem;
+			padding: 0 4.5rem;
+			margin: 5.8rem 0 1rem 0;
+			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+		}
+
+		form {
+			height: 100%;
+			width: 40rem;
+			font-family: 'Tenor', sans-serif;
+			padding: 0.5rem 2rem;
+
+			.input_group {
+				display: flex;
+				flex-direction: column;
+				margin: 1rem 0;
+				position: relative;
+
+				.field {
+					width: 100%;
+					height: 4rem;
+					font-size: 1.45rem;
+					padding-left: 0.7rem;
+					border: 0.19rem solid $dark-gray;
+					border-radius: 0.2rem;
+					box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+
+					.field:focus {
+						color: $dark;
+						font-style: inherit;
+					}
+				}
+
+				small {
+					font-size: 1.1rem;
+					letter-spacing: 0.5px;
+					margin-top: 0.4rem;
+					visibility: hidden;
+				}
+
+				.message {
+					color: $dark;
+					padding: 0.5rem;
+					margin-bottom: 1.5rem;
+					font-family: 'Calibri', sans-serif;
+					border: 0.19rem solid #999;
+					border-radius: 0.2rem;
+					box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+
+					.message:focus {
+						background: #f1f1f1;
+						color: #212121;
+					}
+				}
+			}
+
+			.input_group.valid .field {
+				border-color: $success;
+			}
+
+			.input_group.error .field {
+				border-color: $danger;
+			}
+
+			.input_group.error small {
+				visibility: visible;
+				color: $danger;
+			}
+
+			.btn-submit {
+				@extend %btn;
+				width: 100%;
+				height: 5rem;
+				color: $light;
+				background-color: $info;
+				text-transform: uppercase;
+				font-size: 1.7rem;
+				text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+				box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+				outline: 2px solid $info;
+				transition: all 0.2s ease;
+
+				&:active {
+					outline: 2px solid $light;
+					outline-offset: -6px;
+				}
+			}
+		}
 	}
 }
