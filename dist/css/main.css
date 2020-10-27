@@ -40,8 +40,8 @@ html {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    font-family: "Tenor Sans";
     font-size: 2.8rem;
-    font-family: 'Tenor Sans', sans-serif;
     font-weight: 700;
     margin-left: 3rem;
     cursor: pointer; }
@@ -101,17 +101,18 @@ html {
     left: 12%;
     width: 60%; }
     .header .banner h1 {
-      color: #fefefe;
+      font-family: "Baloo Da 2";
       font-size: 6rem;
-      font-family: 'Baloo Da 2', sans-serif;
       font-weight: 300;
-      width: 55%;
+      color: #fefefe;
       line-height: 6.5rem;
       letter-spacing: 0.2rem;
+      width: 55%;
       text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4); }
     .header .banner p {
-      font-family: 'Calibri', sans-serif;
+      font-family: "Calibri";
       font-size: 2rem;
+      font-weight: 300;
       color: #fefefe;
       letter-spacing: 0.1rem;
       margin-bottom: 3rem;
@@ -133,7 +134,7 @@ html {
 .about_us {
   width: 100%;
   background-color: #f3f3f3;
-  padding-bottom: 8rem; }
+  padding: 0 2rem 8rem 2rem; }
 
 .services {
   width: 100%;
@@ -326,6 +327,63 @@ html {
         .section_content .content_right form .btn-submit:active {
           outline: 2px solid #fefefe;
           outline-offset: -6px; }
+
+.footer_container {
+  width: 100%;
+  height: 22rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #000; }
+  .footer_container .footer_links {
+    width: 60%;
+    padding: 2rem; }
+    .footer_container .footer_links .link_wrapper {
+      width: 100%;
+      height: 12rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); }
+      .footer_container .footer_links .link_wrapper .link_items {
+        display: flex;
+        flex-direction: column; }
+        .footer_container .footer_links .link_wrapper .link_items h2 {
+          color: #fefefe;
+          font-family: "Baloo Da 2";
+          font-size: 2.4rem;
+          font-weight: 600; }
+        .footer_container .footer_links .link_wrapper .link_items a {
+          font-family: "Baloo Da 2";
+          font-size: 1.45rem;
+          font-weight: 100;
+          line-height: 1.7rem;
+          color: #fefefe; }
+
+.social_media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #fefefe; }
+  .social_media .footer_logo {
+    color: #fefefe;
+    font-family: "Tenor Sans";
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-right: 2rem; }
+  .social_media .rights {
+    font-family: "Calibri";
+    font-size: 1.25rem;
+    font-weight: 100; }
+  .social_media .social_icons {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.3rem; }
+    .social_media .social_icons i {
+      color: #fefefe; }
+      .social_media .social_icons i:hover {
+        color: #f29d1f; }
 
 .section_header {
   display: flex;
