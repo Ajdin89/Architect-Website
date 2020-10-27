@@ -2,10 +2,11 @@
 .navbar {
 	@include flexLayout(space-between);
 	position: sticky;
+	top: 0;
 	height: 80px;
 	background: $dark;
 	font-size: 1.7rem;
-	top: 0;
+	padding: 0 2rem;
 	z-index: 99;
 
 	&_logo {
@@ -145,27 +146,6 @@
 	padding-bottom: 8rem;
 }
 
-.section_header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 7rem 0 10rem 0;
-
-	.section_heading {
-		font-family: 'Varela', sans-serif;
-		font-size: 5rem;
-		font-weight: 500;
-		color: $dark;
-		margin-bottom: 4rem;
-	}
-
-	.underline {
-		width: 12rem;
-		height: 0.3rem;
-		background: $primary;
-	}
-}
-
 .services {
 	width: 100%;
 	height: 100%;
@@ -181,27 +161,27 @@
 	.service {
 		display: grid;
 		grid-template-rows: repeat(3, 1fr);
-	
+
 		.box {
 			display: block;
 			margin-right: 2rem;
-	
+
 			.service_header {
 				display: flex;
 				margin-bottom: 1.5rem;
-			
+
 				i {
 					color: $primary;
 					font-size: 2.5rem;
 					margin-right: 1rem;
 				}
-				
+
 				h3 {
 					font-size: 2.5rem;
 					color: $dark;
 				}
 			}
-			
+
 			.service_text {
 				font-size: 1.2rem;
 				line-height: 1.5rem;
@@ -211,6 +191,83 @@
 	}
 }
 
+// TEAM
+.team {
+	display: block;
+	padding: 0 5rem 10rem 5rem;
+}
 
+.cards-wrapper {
+	@include flexLayout($justify: space-evenly);
+	width: 100%;
 
+	.card {
+		width: 37rem;
+		height: 44rem;
+		box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+		border-radius: 0.5rem;
+		position: relative;
 
+		.card-img {
+			width: 100%;
+			height: 100%;
+			border-radius: 0.5rem;
+			background-color: #262626;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 0.5rem;
+				opacity: 0.8;
+				transition: opacity 0.3s;
+			}
+		}
+
+		&:hover .card-img img {
+			opacity: 0.4;
+		}
+	}
+
+	.card-info {
+		position: absolute;
+		bottom: 0;
+		padding: 2rem;
+		text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.4s ease-in-out;
+
+		h2 {
+			font-family: 'Baloo Da 2', sans-serif;
+			font-size: 3.5rem;
+			font-weight: 300;
+			line-height: 2.5rem;
+			color: #eee;
+			margin-bottom: 0.8rem;
+		}
+
+		h3 {
+			font-family: 'Julius Sans One', sans-serif;
+			font-weight: 600;
+			font-size: 2rem;
+			color: $primary;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			width: 90%;
+			font-family: 'Baloo Da 2', sans-serif;
+			font-size: 1.4rem;
+			font-weight: 300;
+			line-height: 1.6rem;
+			color: #eee;
+		}
+	}
+
+	.card:hover .card-info {
+		bottom: 2rem;
+		opacity: 1;
+		visibility: visible;
+	}
+}
