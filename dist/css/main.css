@@ -45,6 +45,12 @@ html {
     font-weight: 700;
     margin-left: 3rem;
     cursor: pointer; }
+    @media screen and (max-width: 960px) {
+      .navbar_logo {
+        font-size: 2.5rem; } }
+    @media screen and (max-width: 680px) {
+      .navbar_logo {
+        font-size: 2.1rem; } }
   .navbar_menu {
     display: flex;
     align-items: center; }
@@ -108,7 +114,20 @@ html {
       line-height: 6.5rem;
       letter-spacing: 0.2rem;
       width: 55%;
+      margin-bottom: 1rem;
       text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4); }
+      @media screen and (max-width: 1200px) {
+        .header .banner h1 {
+          font-size: 4.5rem;
+          line-height: 4.8rem; } }
+      @media screen and (max-width: 960px) {
+        .header .banner h1 {
+          font-size: 3rem;
+          line-height: 3.2rem; } }
+      @media screen and (max-width: 680px) {
+        .header .banner h1 {
+          font-size: 2.1rem;
+          line-height: 2.2rem; } }
     .header .banner p {
       font-family: "Calibri";
       font-size: 2rem;
@@ -117,6 +136,12 @@ html {
       letter-spacing: 0.1rem;
       margin-bottom: 3rem;
       text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4); }
+      @media screen and (max-width: 960px) {
+        .header .banner p {
+          font-size: 1.5rem; } }
+      @media screen and (max-width: 680px) {
+        .header .banner p {
+          font-size: 1rem; } }
     .header .banner .btn-header {
       padding: 2rem 6rem;
       color: #fefefe;
@@ -126,6 +151,14 @@ html {
       text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
       box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
       outline: 2px solid #f29d1f; }
+      @media screen and (max-width: 960px) {
+        .header .banner .btn-header {
+          padding: 1.4rem 4rem;
+          font-size: 1rem; } }
+      @media screen and (max-width: 680px) {
+        .header .banner .btn-header {
+          padding: 0.85rem 2.5rem;
+          font-size: 0.8rem; } }
       .header .banner .btn-header:active {
         background-color: #d2820c;
         outline: 2px solid #f29d1f;
@@ -134,23 +167,45 @@ html {
 .about_us {
   width: 100%;
   background-color: #f3f3f3;
-  padding: 0 2rem 8rem 2rem; }
+  padding-bottom: 8rem; }
 
 .services {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 4rem; }
-  .services .about_img_wrapper img {
-    width: 75rem;
-    margin-left: 5rem; }
+  padding-right: 4rem; }
+  @media screen and (max-width: 1200px) {
+    .services {
+      display: block;
+      padding-left: 6rem; } }
+  .services .about_img_wrapper {
+    display: flex;
+    justify-content: center; }
+    .services .about_img_wrapper img {
+      width: 72rem;
+      padding-bottom: 3rem; }
+      @media screen and (max-width: 1200px) {
+        .services .about_img_wrapper img {
+          width: 65rem; } }
+      @media screen and (max-width: 960px) {
+        .services .about_img_wrapper img {
+          width: 55rem; } }
+      @media screen and (max-width: 680px) {
+        .services .about_img_wrapper img {
+          width: 40rem; } }
   .services .service {
     display: grid;
-    grid-template-rows: repeat(3, 1fr); }
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem; }
     .services .service .box {
-      display: block;
-      margin-right: 2rem; }
+      display: block; }
+      @media (min-width: 1600px) {
+        .services .service .box {
+          margin-right: 8rem; } }
+      @media screen and (max-width: 1200px) {
+        .services .service .box {
+          padding-top: 2rem; } }
       .services .service .box .service_header {
         display: flex;
         margin-bottom: 1.5rem; }
@@ -175,12 +230,18 @@ html {
   justify-content: space-evenly;
   align-items: center;
   width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .cards-wrapper {
+      flex-direction: column; } }
   .cards-wrapper .card {
-    width: 37rem;
-    height: 44rem;
+    width: 35rem;
+    height: 42rem;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 0.5rem;
     position: relative; }
+    @media screen and (max-width: 1200px) {
+      .cards-wrapper .card {
+        margin-bottom: 4rem; } }
     .cards-wrapper .card .card-img {
       width: 100%;
       height: 100%;
@@ -251,6 +312,9 @@ html {
   .section_content .content_left img {
     width: 50rem;
     height: 60rem; }
+    @media screen and (max-width: 1200px) {
+      .section_content .content_left img {
+        display: none; } }
   .section_content .content_right {
     display: flex;
     justify-content: center;
@@ -274,6 +338,15 @@ html {
       width: 40rem;
       font-family: 'Tenor', sans-serif;
       padding: 0.5rem 2rem; }
+      @media screen and (max-width: 1200px) {
+        .section_content .content_right form {
+          width: 55rem; } }
+      @media screen and (max-width: 960px) {
+        .section_content .content_right form {
+          width: 48rem; } }
+      @media screen and (max-width: 680px) {
+        .section_content .content_right form {
+          width: 35rem; } }
       .section_content .content_right form .input_group {
         display: flex;
         flex-direction: column;
@@ -304,7 +377,6 @@ html {
           border-radius: 0.2rem;
           box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
           .section_content .content_right form .input_group .message .message:focus {
-            background: #f1f1f1;
             color: #212121; }
       .section_content .content_right form .input_group.valid .field {
         border-color: #2ecc71; }
@@ -330,7 +402,7 @@ html {
 
 .footer_container {
   width: 100%;
-  height: 22rem;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -340,23 +412,41 @@ html {
     padding: 2rem; }
     .footer_container .footer_links .link_wrapper {
       width: 100%;
-      height: 12rem;
+      height: auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr); }
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem; }
+      @media screen and (max-width: 960px) {
+        .footer_container .footer_links .link_wrapper {
+          grid-template-columns: repeat(2, 1fr); } }
       .footer_container .footer_links .link_wrapper .link_items {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        width: 13rem;
+        margin: 0 auto; }
         .footer_container .footer_links .link_wrapper .link_items h2 {
           color: #fefefe;
           font-family: "Baloo Da 2";
           font-size: 2.4rem;
           font-weight: 600; }
+          @media screen and (max-width: 960px) {
+            .footer_container .footer_links .link_wrapper .link_items h2 {
+              font-size: 2.1rem; } }
+          @media screen and (max-width: 680px) {
+            .footer_container .footer_links .link_wrapper .link_items h2 {
+              font-size: 1.8rem; } }
         .footer_container .footer_links .link_wrapper .link_items a {
           font-family: "Baloo Da 2";
           font-size: 1.45rem;
           font-weight: 100;
           line-height: 1.7rem;
           color: #fefefe; }
+          @media screen and (max-width: 960px) {
+            .footer_container .footer_links .link_wrapper .link_items a {
+              font-size: 1.38rem; } }
+          @media screen and (max-width: 680px) {
+            .footer_container .footer_links .link_wrapper .link_items a {
+              font-size: 1.3rem; } }
 
 .social_media {
   display: flex;
@@ -364,17 +454,29 @@ html {
   align-items: center;
   height: 100%;
   width: 100%;
-  color: #fefefe; }
+  color: #fefefe;
+  padding-bottom: 2rem; }
+  @media screen and (max-width: 680px) {
+    .social_media {
+      flex-direction: column;
+      margin-top: 1rem; } }
   .social_media .footer_logo {
     color: #fefefe;
     font-family: "Tenor Sans";
     font-size: 1.7rem;
     font-weight: 500;
     margin-right: 2rem; }
+    @media screen and (max-width: 680px) {
+      .social_media .footer_logo {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem; } }
   .social_media .rights {
     font-family: "Calibri";
     font-size: 1.25rem;
     font-weight: 100; }
+    @media screen and (max-width: 680px) {
+      .social_media .rights {
+        margin-bottom: 1rem; } }
   .social_media .social_icons {
     width: 20rem;
     display: flex;
@@ -421,7 +523,7 @@ html {
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 50vh;
+    height: 60vh;
     font-size: 1.8rem; }
   .navbar_toggle .bar {
     width: 25px;

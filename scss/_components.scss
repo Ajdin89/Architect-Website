@@ -22,6 +22,14 @@
 		@include typography($family: 'Tenor Sans', $size: 2.8rem, $weight: 700);
 		margin-left: 3rem;
 		cursor: pointer;
+
+		@include responsive(md) {
+			font-size: 2.5rem;
+		}
+
+		@include responsive(sm) {
+			font-size: 2.1rem;
+		}
 	}
 
 	&_menu {
@@ -103,7 +111,23 @@
 			line-height: 6.5rem;
 			letter-spacing: 0.2rem;
 			width: 55%;
+			margin-bottom: 1rem;
 			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+
+			@include responsive(lg) {
+				font-size: 4.5rem;
+				line-height: 4.8rem;
+			}
+
+			@include responsive(md) {
+				font-size: 3rem;
+				line-height: 3.2rem;
+			}
+
+			@include responsive(sm) {
+				font-size: 2.1rem;
+				line-height: 2.2rem;
+			}
 		}
 
 		p {
@@ -112,6 +136,14 @@
 			letter-spacing: 0.1rem;
 			margin-bottom: 3rem;
 			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+
+			@include responsive(md) {
+				font-size: 1.5rem;
+			}
+
+			@include responsive(sm) {
+				font-size: 1rem;
+			}
 		}
 
 		.btn-header {
@@ -124,6 +156,16 @@
 			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
 			box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
 			outline: 2px solid $primary;
+
+			@include responsive(md) {
+				padding: 1.4rem 4rem;
+				font-size: 1rem;
+			}
+
+			@include responsive(sm) {
+				padding: 0.85rem 2.5rem;
+				font-size: 0.8rem;
+			}
 
 			&:active {
 				background-color: darken($primary, 10%);
@@ -138,7 +180,7 @@
 .about_us {
 	width: 100%;
 	background-color: $secondary;
-	padding: 0 2rem 8rem 2rem;
+	padding-bottom: 8rem;
 }
 
 .services {
@@ -146,20 +188,50 @@
 	height: 100%;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-gap: 4rem;
+	padding-right: 4rem;
 
-	.about_img_wrapper img {
-		width: 75rem;
-		margin-left: 5rem;
+	@include responsive(lg) {
+		display: block;
+		padding-left: 6rem;
+	}
+
+	.about_img_wrapper {
+		display: flex;
+		justify-content: center;
+
+		img {
+			width: 72rem;
+			padding-bottom: 3rem;
+
+			@include responsive(lg) {
+				width: 65rem;
+			}
+
+			@include responsive(md) {
+				width: 55rem;
+			}
+
+			@include responsive(sm) {
+				width: 40rem;
+			}
+		}
 	}
 
 	.service {
 		display: grid;
 		grid-template-rows: repeat(3, 1fr);
+		grid-gap: 1rem;
 
 		.box {
 			display: block;
-			margin-right: 2rem;
+
+			@include responsive(xl) {
+				margin-right: 8rem;
+			}
+
+			@include responsive(lg) {
+				padding-top: 2rem;
+			}
 
 			.service_header {
 				display: flex;
@@ -196,12 +268,20 @@
 	@include flexLayout($justify: space-evenly);
 	width: 100%;
 
+	@include responsive(lg) {
+		flex-direction: column;
+	}
+
 	.card {
-		width: 37rem;
-		height: 44rem;
+		width: 35rem;
+		height: 42rem;
 		box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 		border-radius: 0.5rem;
 		position: relative;
+
+		@include responsive(lg) {
+			margin-bottom: 4rem;
+		}
 
 		.card-img {
 			width: 100%;
@@ -284,6 +364,10 @@
 	.content_left img {
 		width: 50rem;
 		height: 60rem;
+
+		@include responsive(lg) {
+			display: none;
+		}
 	}
 
 	.content_right {
@@ -308,6 +392,18 @@
 			width: 40rem;
 			font-family: 'Tenor', sans-serif;
 			padding: 0.5rem 2rem;
+
+			@include responsive(lg) {
+				width: 55rem;
+			}
+
+			@include responsive(md) {
+				width: 48rem;
+			}
+
+			@include responsive(sm) {
+				width: 35rem;
+			}
 
 			.input_group {
 				display: flex;
@@ -347,7 +443,6 @@
 					box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
 
 					.message:focus {
-						background: #f1f1f1;
 						color: #212121;
 					}
 				}
@@ -391,7 +486,7 @@
 // FOOTER
 .footer_container {
 	width: 100%;
-	height: 22rem;
+	height: auto;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -403,23 +498,46 @@
 
 		.link_wrapper {
 			width: 100%;
-			height: 12rem;
+			height: auto;
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 1rem;
+
+			@include responsive(md) {
+				grid-template-columns: repeat(2, 1fr);
+			}
 
 			.link_items {
 				display: flex;
 				flex-direction: column;
+				width: 13rem;
+				margin: 0 auto;
 
 				h2 {
 					color: $light;
 					@include typography($size: 2.4rem, $weight: 600);
+
+					@include responsive(md) {
+						font-size: 2.1rem;
+					}
+
+					@include responsive(sm) {
+						font-size: 1.8rem;
+					}
 				}
 
 				a {
 					@include typography($size: 1.45rem, $weight: 100);
 					line-height: 1.7rem;
 					color: $light;
+
+					@include responsive(md) {
+						font-size: 1.38rem;
+					}
+
+					@include responsive(sm) {
+						font-size: 1.3rem;
+					}
 				}
 			}
 		}
@@ -431,15 +549,30 @@
 	height: 100%;
 	width: 100%;
 	color: $light;
+	padding-bottom: 2rem;
+
+	@include responsive(sm) {
+		flex-direction: column;
+		margin-top: 1rem;
+	}
 
 	.footer_logo {
 		color: $light;
 		@include typography($family: 'Tenor Sans', $size: 1.7rem, $weight: 500);
 		margin-right: 2rem;
+
+		@include responsive(sm) {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
 	}
 
 	.rights {
 		@include typography($family: 'Calibri', $size: 1.25rem, $weight: 100);
+
+		@include responsive(sm) {
+			margin-bottom: 1rem;
+		}
 	}
 
 	.social_icons {

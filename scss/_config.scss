@@ -35,7 +35,6 @@ $info: #0f3cff;
 	align-items: center;
 }
 
-
 @mixin typography($family: 'Baloo Da 2', $size: 2rem, $weight: 300) {
 	font-family: $family;
 	font-size: $size;
@@ -44,11 +43,29 @@ $info: #0f3cff;
 
 // MEDIA QUERIES
 @mixin responsive($breakpoint) {
+	@if ($breakpoint == xl) {
+		@media (min-width: 1600px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == lg) {
+		@media screen and (max-width: 1200px) {
+			@content;
+		}
+	}
 	@if ($breakpoint == md) {
 		@media screen and (max-width: 960px) {
 			@content;
 		}
 	}
+	@if ($breakpoint == sm) {
+		@media screen and (max-width: 680px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == xs) {
+		@media screen and (max-width: 500px) {
+			@content;
+		}
+	}
 }
-
-
