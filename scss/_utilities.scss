@@ -3,6 +3,10 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 7rem 0 10rem 0;
+
+	@include responsive(sm) {
+		padding: 4rem 0 6.5rem 0;
+	}
 }
 
 .section_heading {
@@ -11,10 +15,28 @@
 	font-weight: 500;
 	color: $dark;
 	margin-bottom: 4rem;
+
+	@include responsive(md) {
+		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	@include responsive(xs) {
+		font-size: 2.7rem;
+		margin-bottom: 2.8rem;
+	}
 }
 
 .underline {
 	width: 12rem;
 	height: 0.3rem;
 	background: $primary;
+
+	@include responsive(sm) {
+		width: 8rem;
+	}
+
+	@include responsive(xs) {
+		width: 6rem;
+	}
 }

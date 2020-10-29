@@ -19,7 +19,7 @@
 		opacity: 1;
 		transition: all 0.5s ease;
 		z-index: 99;
-		height: 60vh;
+		height: 40vh;
 		font-size: 1.8rem;
 	}
 
@@ -33,6 +33,10 @@
 		cursor: pointer;
 	}
 
+	.navbar_item {
+		height: 6rem;
+	}
+
 	.navbar_links {
 		text-align: center;
 		padding: 2rem;
@@ -41,7 +45,7 @@
 	}
 
 	.navbar_btn {
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
 	}
 
 	.button {
@@ -49,7 +53,12 @@
 		width: 40%;
 		height: 50px;
 		margin: 0;
+
+		@include responsive(sm) {
+			width: 60%;
+		}
 	}
+
 	#mobile-menu {
 		position: absolute;
 		top: 20%;

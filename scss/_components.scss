@@ -24,11 +24,18 @@
 		cursor: pointer;
 
 		@include responsive(md) {
-			font-size: 2.5rem;
+			font-size: 2.6rem;
+			margin-left: 1.5rem;
 		}
 
 		@include responsive(sm) {
+			font-size: 2.4rem;
+			margin-left: 1rem;
+		}
+
+		@include responsive(xs) {
 			font-size: 2.1rem;
+			margin-left: 0.5rem;
 		}
 	}
 
@@ -38,7 +45,7 @@
 	}
 
 	&_item {
-		height: 80px;
+		height: 7rem;
 	}
 
 	&_links {
@@ -110,7 +117,7 @@
 			color: $light;
 			line-height: 6.5rem;
 			letter-spacing: 0.2rem;
-			width: 55%;
+			width: 60%;
 			margin-bottom: 1rem;
 			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
 
@@ -120,13 +127,20 @@
 			}
 
 			@include responsive(md) {
-				font-size: 3rem;
-				line-height: 3.2rem;
+				font-size: 3.8rem;
+				line-height: 3.6rem;
+				width: 70%;
 			}
 
 			@include responsive(sm) {
-				font-size: 2.1rem;
-				line-height: 2.2rem;
+				width: 70%;
+				font-size: 2.7rem;
+				line-height: 2.5rem;
+			}
+
+			@include responsive(xs) {
+				font-size: 1.7rem;
+				line-height: 1.8rem;
 			}
 		}
 
@@ -143,6 +157,10 @@
 
 			@include responsive(sm) {
 				font-size: 1rem;
+			}
+
+			@include responsive(xs) {
+				font-size: 0.8rem;
 			}
 		}
 
@@ -165,6 +183,11 @@
 			@include responsive(sm) {
 				padding: 0.85rem 2.5rem;
 				font-size: 0.8rem;
+			}
+
+			@include responsive(xs) {
+				padding: 0.55rem 1.5rem;
+				font-size: 0.5rem;
 			}
 
 			&:active {
@@ -214,6 +237,10 @@
 			@include responsive(sm) {
 				width: 40rem;
 			}
+
+			@include responsive(xs) {
+				width: 30rem;
+			}
 		}
 	}
 
@@ -241,11 +268,27 @@
 					color: $primary;
 					font-size: 2.5rem;
 					margin-right: 1rem;
+
+					@include responsive(sm) {
+						font-size: 2.2rem;
+					}
+
+					@include responsive(xs) {
+						font-size: 2rem;
+					}
 				}
 
 				h3 {
 					font-size: 2.5rem;
 					color: $dark;
+
+					@include responsive(sm) {
+						font-size: 2.2rem;
+					}
+
+					@include responsive(xs) {
+						font-size: 2rem;
+					}
 				}
 			}
 
@@ -253,6 +296,16 @@
 				font-size: 1.2rem;
 				line-height: 1.5rem;
 				letter-spacing: 0.1rem;
+
+				@include responsive(sm) {
+					font-size: 1.2rem;
+					line-height: 1.2rem;
+				}
+
+				@include responsive(xs) {
+					font-size: 1rem;
+					line-height: 1.1rem;
+				}
 			}
 		}
 	}
@@ -262,6 +315,10 @@
 .team {
 	display: block;
 	padding: 0 5rem 10rem 5rem;
+
+	@include responsive(sm) {
+		padding: 0 5rem 3rem 5rem;
+	}
 }
 
 .cards-wrapper {
@@ -280,6 +337,12 @@
 		position: relative;
 
 		@include responsive(lg) {
+			margin-bottom: 4rem;
+		}
+
+		@include responsive(xs) {
+			width: 29rem;
+			height: 36rem;
 			margin-bottom: 4rem;
 		}
 
@@ -346,12 +409,15 @@
 	background: #ece9e6;
 	background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
 	background: linear-gradient(to right, #ffffff, #ece9e6);
-
 	@include flexLayout;
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
 	padding-bottom: 10rem;
+
+	@include responsive(sm) {
+		padding-bottom: 6rem;
+	}
 }
 
 .section_content {
@@ -385,6 +451,11 @@
 			padding: 0 4.5rem;
 			margin: 5.8rem 0 1rem 0;
 			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+
+			@include responsive(sm) {
+				font-size: 1.75rem;
+				margin: 3rem 0 1rem 0;
+			}
 		}
 
 		form {
@@ -403,6 +474,10 @@
 
 			@include responsive(sm) {
 				width: 35rem;
+			}
+
+			@include responsive(sm) {
+				width: 27rem;
 			}
 
 			.input_group {
@@ -473,6 +548,11 @@
 				box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
 				outline: 2px solid $info;
 				transition: all 0.2s ease;
+
+				@include responsive(sm) {
+					height: 4rem;
+					font-size: 1.4rem;
+				}
 
 				&:active {
 					outline: 2px solid $light;
