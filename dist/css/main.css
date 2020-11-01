@@ -11,13 +11,21 @@
 html {
   font-size: 62.5%; }
 
-.navbar_btn .button, .header .banner .btn-header, .section_content .content_right form .btn-submit {
+.btn-main, .btn-info, .navbar_btn .button, .header .banner .btn-header, .section_content .content_right form .btn-submit {
   display: inline-block;
   text-align: center;
   border: none;
   outline: none;
-  transition: 0.2s all ease;
+  transition: 0.4s all ease;
   cursor: pointer; }
+
+.btn-main {
+  background: #f29d1f;
+  color: #fefefe; }
+
+.btn-info {
+  background: #0f3cff;
+  color: #fefefe; }
 
 .navbar {
   display: flex;
@@ -70,10 +78,10 @@ html {
     height: 100%;
     color: #fefefe;
     text-transform: uppercase;
-    transition: all 0.3s ease; }
+    transition: all 0.5s; }
     .navbar_links:hover {
       color: #f29d1f;
-      transition: all 0.3s ease; }
+      border-bottom: 2px solid #f29d1f; }
   .navbar_btn {
     display: flex;
     justify-content: center;
@@ -82,8 +90,6 @@ html {
     padding: 0 1rem;
     margin-right: 2rem; }
     .navbar_btn .button {
-      color: #fefefe;
-      background-color: #f29d1f;
       padding: 10px 20px;
       border: 1px solid #333;
       border-radius: 24px;
@@ -159,8 +165,6 @@ html {
           font-size: 0.8rem; } }
     .header .banner .btn-header {
       padding: 2rem 6rem;
-      color: #fefefe;
-      background-color: #f29d1f;
       text-transform: uppercase;
       font-size: 1.7rem;
       text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
@@ -448,8 +452,6 @@ html {
       .section_content .content_right form .btn-submit {
         width: 100%;
         height: 5rem;
-        color: #fefefe;
-        background-color: #0f3cff;
         text-transform: uppercase;
         font-size: 1.7rem;
         text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
@@ -462,7 +464,8 @@ html {
             font-size: 1.4rem; } }
         .section_content .content_right form .btn-submit:active {
           outline: 2px solid #fefefe;
-          outline-offset: -6px; }
+          outline-offset: -6px;
+          background: #4265ff; }
 
 .footer_container {
   width: 100%;
@@ -551,6 +554,21 @@ html {
       .social_media .social_icons i:hover {
         color: #f29d1f; }
 
+.scroll-btn {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 3.5rem;
+  width: 4rem;
+  height: 4rem;
+  background: #f29d1f; }
+  .scroll-btn i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.8rem;
+    color: #fefefe; }
+
 .section_header {
   display: flex;
   flex-direction: column;
@@ -604,7 +622,7 @@ html {
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 40vh;
+    height: 45vh;
     font-size: 1.8rem; }
   .navbar_toggle .bar {
     width: 25px;
@@ -621,8 +639,10 @@ html {
     padding: 2rem;
     width: 100%;
     display: block; }
+    .navbar_links:hover {
+      border-bottom: none; }
   .navbar_btn {
-    padding-bottom: 1rem; }
+    padding-bottom: 2rem; }
   .button {
     display: flex;
     justify-content: center;

@@ -79,3 +79,15 @@ function setValid(input) {
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+// SCROLLING BTN 
+const scroll = document.querySelector('scroll-btn');
+
+scroll.addEventListener('click', () => {
+	const html = document.querySelector('html');
+	html.style.scrollBehavior = 'smooth';
+	setTimeout(() => {
+		html.style.scrollBehavior = 'unset';
+	}, 1000);
+})
+

@@ -54,11 +54,11 @@
 		height: 100%;
 		color: $light;
 		text-transform: uppercase;
-		transition: all 0.3s ease;
+		transition: all 0.5s;
 
 		&:hover {
 			color: $primary;
-			transition: all 0.3s ease;
+			border-bottom: 2px solid $primary;
 		}
 	}
 
@@ -70,8 +70,6 @@
 
 		.button {
 			@extend %btn;
-			color: $light;
-			background-color: $primary;
 			padding: 10px 20px;
 			border: 1px solid $dark;
 			border-radius: 24px;
@@ -167,8 +165,6 @@
 		.btn-header {
 			@extend %btn;
 			padding: 2rem 6rem;
-			color: $light;
-			background-color: $primary;
 			text-transform: uppercase;
 			font-size: 1.7rem;
 			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
@@ -540,8 +536,6 @@
 				@extend %btn;
 				width: 100%;
 				height: 5rem;
-				color: $light;
-				background-color: $info;
 				text-transform: uppercase;
 				font-size: 1.7rem;
 				text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
@@ -557,6 +551,7 @@
 				&:active {
 					outline: 2px solid $light;
 					outline-offset: -6px;
+					background: lighten($info, 10%);
 				}
 			}
 		}
@@ -668,5 +663,22 @@
 				color: $primary;
 			}
 		}
+	}
+}
+
+// SCROLL-BUTTON
+.scroll-btn {
+	position: fixed;
+	bottom: 4.5rem;
+	right: 3.5rem;
+	width: 4rem;
+	height: 4rem;
+	background: $primary;
+
+	i {
+		@include flexLayout;
+		height: 100%;
+		font-size: 1.8rem;
+		color: $light;
 	}
 }

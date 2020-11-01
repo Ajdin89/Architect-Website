@@ -14,17 +14,21 @@ $info: #0f3cff;
 	text-align: center;
 	border: none;
 	outline: none;
-	transition: 0.2s all ease;
+	transition: 0.4s all ease;
 	cursor: pointer;
+}
 
-	&-primary {
+.btn {
+	&-main {
 		@extend %btn;
-		background-color: lighten($primary, 10%);
+		background: $primary;
+		color: $light;
 	}
 
-	&-secondary {
+	&-info {
 		@extend %btn;
-		background-color: lighten($dark, 15%);
+		background: $info;
+		color: $light;
 	}
 }
 

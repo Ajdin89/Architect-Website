@@ -19,7 +19,7 @@
 		opacity: 1;
 		transition: all 0.5s ease;
 		z-index: 99;
-		height: 40vh;
+		height: 45vh;
 		font-size: 1.8rem;
 	}
 
@@ -42,10 +42,14 @@
 		padding: 2rem;
 		width: 100%;
 		display: block;
+
+		&:hover {
+			border-bottom: none;
+		}
 	}
 
 	.navbar_btn {
-		padding-bottom: 1rem;
+		padding-bottom: 2rem;
 	}
 
 	.button {
