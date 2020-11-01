@@ -132,13 +132,13 @@
 
 			@include responsive(sm) {
 				width: 70%;
-				font-size: 2.7rem;
+				font-size: 2.9rem;
 				line-height: 2.5rem;
 			}
 
 			@include responsive(xs) {
-				font-size: 1.7rem;
-				line-height: 1.8rem;
+				font-size: 2.5rem;
+				line-height: 2.4rem;
 			}
 		}
 
@@ -154,11 +154,11 @@
 			}
 
 			@include responsive(sm) {
-				font-size: 1rem;
+				font-size: 1.2rem;
 			}
 
 			@include responsive(xs) {
-				font-size: 0.8rem;
+				font-size: 1rem;
 			}
 		}
 
@@ -177,12 +177,12 @@
 			}
 
 			@include responsive(sm) {
-				padding: 0.85rem 2.5rem;
+				padding: 1rem 2.8rem;
 				font-size: 0.8rem;
 			}
 
 			@include responsive(xs) {
-				padding: 0.55rem 1.5rem;
+				padding: 0.85rem 2rem;
 				font-size: 0.5rem;
 			}
 

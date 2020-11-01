@@ -140,12 +140,12 @@ html {
       @media screen and (max-width: 680px) {
         .header .banner h1 {
           width: 70%;
-          font-size: 2.7rem;
+          font-size: 2.9rem;
           line-height: 2.5rem; } }
       @media screen and (max-width: 500px) {
         .header .banner h1 {
-          font-size: 1.7rem;
-          line-height: 1.8rem; } }
+          font-size: 2.5rem;
+          line-height: 2.4rem; } }
     .header .banner p {
       font-family: "Calibri";
       font-size: 2rem;
@@ -159,10 +159,10 @@ html {
           font-size: 1.5rem; } }
       @media screen and (max-width: 680px) {
         .header .banner p {
-          font-size: 1rem; } }
+          font-size: 1.2rem; } }
       @media screen and (max-width: 500px) {
         .header .banner p {
-          font-size: 0.8rem; } }
+          font-size: 1rem; } }
     .header .banner .btn-header {
       padding: 2rem 6rem;
       text-transform: uppercase;
@@ -176,11 +176,11 @@ html {
           font-size: 1rem; } }
       @media screen and (max-width: 680px) {
         .header .banner .btn-header {
-          padding: 0.85rem 2.5rem;
+          padding: 1rem 2.8rem;
           font-size: 0.8rem; } }
       @media screen and (max-width: 500px) {
         .header .banner .btn-header {
-          padding: 0.55rem 1.5rem;
+          padding: 0.85rem 2rem;
           font-size: 0.5rem; } }
       .header .banner .btn-header:active {
         background-color: #d2820c;
