@@ -91,15 +91,18 @@ html {
     margin-right: 2rem; }
     .navbar_btn .button {
       padding: 10px 20px;
-      border: 1px solid #333;
+      color: #f29d1f;
+      text-transform: uppercase;
       border-radius: 24px;
-      background-image: linear-gradient(to right, transparent 50%, #ff4b4b 50%);
+      border: 0.15rem solid #f29d1f;
+      background-image: linear-gradient(to right, transparent 50%, #f29d1f 50%);
       background-size: 200%;
       background-position: 0%;
       text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
       transition: 0.4s all ease-in-out; }
       .navbar_btn .button:hover {
-        background-position: 100%; }
+        background-position: 100%;
+        color: #fefefe; }
       .navbar_btn .button:active {
         transform: scale(0.97); }
 

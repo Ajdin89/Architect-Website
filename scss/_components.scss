@@ -71,16 +71,21 @@
 		.button {
 			@extend %btn;
 			padding: 10px 20px;
-			border: 1px solid $dark;
+			color: $primary;
+			text-transform: uppercase;
 			border-radius: 24px;
-			background-image: linear-gradient(to right, transparent 50%, #ff4b4b 50%);
+			border: 0.15rem solid $primary;
+			background-image: linear-gradient(to right, transparent 50%, $primary 50%);
 			background-size: 200%;
 			background-position: 0%;
+			
 			text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
 			transition: 0.4s all ease-in-out;
 
+			
 			&:hover {
 				background-position: 100%;
+				color: $light;
 			}
 
 			&:active {
